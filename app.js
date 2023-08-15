@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 app.use(bodyParser.json());
 
 // Endpoint to receive Zendesk webhook for ticket creation
-app.post("/zendesk/ticket-created", (req, res) => {
+app.post("https://zendesk-monitor.onrender.com/zendesk/ticket-created", (req, res) => {
   const ticketData = req.body;
 
   // For demonstration, we'll just log the ticket data.
